@@ -1,0 +1,15 @@
+.thumbnail img{
+	width: 100%;
+}
+
+#bigImage {
+ 	padding:0;
+}
+
+.thumbnail.caption-full P{
+	padding: 9px;
+}
+
+#delete-form{
+	display:inline;
+}
