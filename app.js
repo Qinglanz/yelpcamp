@@ -17,7 +17,14 @@ var campgroundRoutes  = require("./routes/campgrounds"),
 	indexRoutes       = require("./routes/index");
 	
 
-mongoose.connect("mongodb://localhost/yelp_camp_new", { useNewUrlParser:true});
+mongoose.connect("mongodb+srv://qinglan:0106101190lan@cluster0-innqi.mongodb.net/test?retryWrites=true&w=majority",{
+	useNewUrlParser: true,
+	useCreateIndex:true
+}).then(() =>{
+	console.log("connected to DB");
+}).catch(err => {
+	console.log(err.message)
+});
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
